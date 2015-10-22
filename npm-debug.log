@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.14.2
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/michealparks/Documents/github/document-ready-promise',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/michealparks/.npm/document-ready-promise/1.0.2/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/michealparks/.npm/document-ready-promise/1.0.2/package.tgz',
+10 verbose tar pack   '/Users/michealparks/Documents/github/document-ready-promise' ]
+11 verbose tarball /Users/michealparks/.npm/document-ready-promise/1.0.2/package.tgz
+12 verbose folder /Users/michealparks/Documents/github/document-ready-promise
+13 info prepublish document-ready-promise@1.0.2
+14 verbose addLocalTarball adding from inside cache /Users/michealparks/.npm/document-ready-promise/1.0.2/package.tgz
+15 silly cache afterAdd document-ready-promise@1.0.2
+16 verbose afterAdd /Users/michealparks/.npm/document-ready-promise/1.0.2/package/package.json not in flight; writing
+17 verbose afterAdd /Users/michealparks/.npm/document-ready-promise/1.0.2/package/package.json written
+18 silly publish { name: 'document-ready-promise',
+18 silly publish   version: '1.0.2',
+18 silly publish   description: 'A simple ES2015 Promise-based "document ready" event handler.',
+18 silly publish   main: 'document-ready-promise.js',
+18 silly publish   scripts: { test: 'echo "Run test.html in your desired browser." && exit 1' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/michealparks/document-ready-promise.git' },
+18 silly publish   keywords:
+18 silly publish    [ 'Promise',
+18 silly publish      'document',
+18 silly publish      'ready',
+18 silly publish      'DOMContentLoaded',
+18 silly publish      'ES6',
+18 silly publish      'ES2015' ],
+18 silly publish   author: { name: 'Micheal Parks' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/michealparks/document-ready-promise/issues' },
+18 silly publish   homepage: 'https://github.com/michealparks/document-ready-promise#readme',
+18 silly publish   readme: '# document-ready-promise\nA simple promise-compatible "document ready" event handler with a few extra treats.\n\nWorks in any browser that supports [Promises](http://caniuse.com/#feat=promises) or with a good [polyfill](https://www.npmjs.com/package/es6-promise).\n\n\nWith browserify/webpack:\n\n```javascript\nrequire(\'document-ready-promise\').then(function() {\n  // Party time.\n})\n\n// or...\n\nrequire(\'document-ready-promise\').global()\n\ndocument.ready.then(function() {\n  // Let\'s do this.\n})\n\n```\n\n\nOr, if in a non-commonjs environment, just include the script. It will attach ```document.ready``` for you.\n\n```html\n<script src="document-ready-promise.js"></script>\n<script>\ndocument.ready.then(function() {\n  // voila!\n})\n</script>\n```\n\n\nThe document.ready promise will preserve any values that you may be passing through the promise chain.\n\n```javascript\n// Using ES2015 and window.fetch\nfetch(new Request(\'kitten.jpg\'))\n  .then(response => response.blob())\n  .then(document.ready)\n  .then(blob => document.querySelector(\'img\').src = URL.createObjectURL(blob))\n```',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'a5e356ed32a6365941e06f1d6459d43f642d248a',
+18 silly publish   _id: 'document-ready-promise@1.0.2',
+18 silly publish   _shasum: '26819a8a7573acd8b4ef8d68d0f84e76db17ebf5',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name document-ready-promise
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/document-ready-promise
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/michealparks/.npm/document-ready-promise/1.0.2/package.tgz
+26 verbose request uri https://registry.npmjs.org/document-ready-promise
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 10:15:48
+29 verbose request using bearer token for auth
+30 verbose request id e10c41b6cc623aa1
+31 http request PUT https://registry.npmjs.org/document-ready-promise
+32 http 403 https://registry.npmjs.org/document-ready-promise
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Thu, 22 Oct 2015 14:15:46 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-jfk1031-JFK',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1445523346.264900,VS0,VE677' }
+34 verbose request invalidating /Users/michealparks/.npm/registry.npmjs.org/document-ready-promise on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 1.0.2." : document-ready-promise
+36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:263:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:251:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:171:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at Request.emit (events.js:110:17)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1073:14)
+36 verbose stack     at Request.emit (events.js:129:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1019:12)
+36 verbose stack     at IncomingMessage.emit (events.js:129:20)
+36 verbose stack     at _stream_readable.js:908:16
+37 verbose statusCode 403
+38 verbose pkgid document-ready-promise
+39 verbose cwd /Users/michealparks/Documents/github/document-ready-promise
+40 error Darwin 15.0.0
+41 error argv "node" "/usr/local/bin/npm" "publish"
+42 error node v0.12.7
+43 error npm  v2.14.2
+44 error code E403
+45 error "You cannot publish over the previously published version 1.0.2." : document-ready-promise
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
