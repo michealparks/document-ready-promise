@@ -11,9 +11,7 @@ require('document-ready-promise').then(function() {
   // Party time.
 })
 
-// or...
-
-require('document-ready-promise').global()
+// ...or use it globally.
 
 document.ready.then(function() {
   // Let's do this.
@@ -22,7 +20,7 @@ document.ready.then(function() {
 ```
 
 
-Or, if in a non-commonjs environment, just include the script. It will attach ```document.ready``` for you.
+If in a non-commonjs environment, just include the script. It will attach ```document.ready``` for you.
 
 ```html
 <script src="document-ready-promise.js"></script>
