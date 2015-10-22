@@ -18,4 +18,4 @@ document.ready.then(function() {
 
 ```
 
-Or just include the script. It will attach ```document.ready``` for you.
+Or, if in a non-commonjs environment, just include the script. It will attach ```document.ready``` for you.
