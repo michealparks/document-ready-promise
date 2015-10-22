@@ -2,11 +2,7 @@
 (function(document, promise) {
 
   if (!document.ready) document.ready = promise
-  
-  if (typeof module !== 'undefined') {
-    module.exports = promise
-    module.exports.global = makeGlobal
-  }
+  if (typeof module !== 'undefined') module.exports = promise
 
 })(window.document, new Promise(function(resolve) {
 
