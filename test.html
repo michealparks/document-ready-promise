@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+
+<title>Test</title>
+<script src="document-ready-promise.js"></script>
+<script type="text/javascript">
+
+(function() {
+'use strict'
+
+document.ready.then(function() {
+  document.querySelector('#item').innerHTML += '<p>test: ready</p>'
+
+  document.ready.then(function() {
+    document.querySelector('#item').innerHTML += '<p>test: already completed</p>'
+  })
+})
+
+document.ready.then(function() {
+  document.querySelector('#item').innerHTML += '<p>test: duplicate call</p>'
+})
+
+})()
+</script>
+
+</head>
+
+<body>
+  <div id="item"></div>
+</body>
+</html>

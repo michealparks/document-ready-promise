@@ -1,0 +1,27 @@
+{
+  "name": "document-ready-promise",
+  "version": "1.0.0",
+  "description": "A simple ES2015 Promise-based \"document ready\" event handler.",
+  "main": "document-ready-promise.js",
+  "scripts": {
+    "test": "echo \"Run test.html in your desired browser.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michealparks/document-ready-promise.git"
+  },
+  "keywords": [
+    "Promise",
+    "document",
+    "ready",
+    "DOMContentLoaded",
+    "ES6",
+    "ES2015"
+  ],
+  "author": "Micheal Parks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michealparks/document-ready-promise/issues"
+  },
+  "homepage": "https://github.com/michealparks/document-ready-promise#readme"
+}
