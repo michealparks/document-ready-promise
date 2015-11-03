@@ -1,8 +1,8 @@
 
 (function(document, promise) {
 
-  if (!document.ready) document.ready = promise
   if (typeof module !== 'undefined') module.exports = promise
+  else document.ready = promise
 
 })(window.document, new Promise(function(resolve) {
 

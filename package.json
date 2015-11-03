@@ -1,6 +1,6 @@
 {
   "name": "document-ready-promise",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A simple ES2015 Promise-based \"document ready\" event handler.",
   "main": "document-ready-promise.js",
   "scripts": {
