@@ -11,12 +11,6 @@ require('document-ready-promise').then(function() {
   // Party time.
 })
 
-// ...or use it globally.
-
-document.ready.then(function() {
-  // Let's do this.
-})
-
 ```
 
 
@@ -25,7 +19,7 @@ If in a non-commonjs environment, just include the script. It will attach ```doc
 ```html
 <script src="document-ready-promise.js"></script>
 <script>
-document.ready.then(function() {
+document.ready().then(function() {
   // voila!
 })
 </script>
