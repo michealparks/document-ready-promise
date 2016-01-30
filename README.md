@@ -7,7 +7,9 @@ Works in any browser that supports [Promises](http://caniuse.com/#feat=promises)
 With browserify/webpack:
 
 ```javascript
-require('document-ready-promise').then(function() {
+const ready = require('document-ready-promise')
+
+ready().then(function() {
   // Party time.
 })
 

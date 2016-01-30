@@ -1,19 +1,19 @@
-
-(function(document, promise) {
-
+(function (document, promise) {
   if (typeof module !== 'undefined') module.exports = promise
   else document.ready = promise
+})(window.document, function (chainVal) {
+  'use strict'
 
-})(window.document, function(chainVal) {
-
-  var d = document, w = window,
+  var d = document,
+      w = window,
       loaded = /^loaded|^i|^c/.test(d.readyState),
-      DOMContentLoaded = 'DOMContentLoaded', load = 'load'
+      DOMContentLoaded = 'DOMContentLoaded',
+      load = 'load'
 
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     if (loaded) return resolve(chainVal)
 
-    function onReady() {
+    function onReady () {
       resolve(chainVal)
       d.removeEventListener(DOMContentLoaded, onReady)
       w.removeEventListener(load, onReady)
@@ -23,4 +23,3 @@
     w.addEventListener(load, onReady)
   })
 })
-
